@@ -1,11 +1,11 @@
-package com.guru.learning;
+package com.guru.learning.strings;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Tester13 {
+public class SubStringsWithVowel {
 
     public static String findSubstring(String s, int k) {
 
@@ -55,32 +55,5 @@ public class Tester13 {
         System.out.println(findSubstring("qwdftr",2));
 
     }
-
-    public static List<String> mostActive(List<String> customers) {
-        Map<Integer,String> opCountToCust=new HashMap<>();
-        Map<String,Integer> opCusToCount=new HashMap<>();
-        for(String s: customers){
-            if(opCusToCount.containsKey(s)){
-                Integer count=opCusToCount.get(s);
-                count++;
-                opCusToCount.put(s, count);
-            }else{
-                opCusToCount.put(s, 1);
-            }
-        }
-
-        int count=customers.size();
-        List<String> output=new ArrayList<>();
-        for(String key: opCusToCount.keySet()){
-            Integer val=opCusToCount.get(key);
-            double percenatge= (val*100)/count;
-            if(percenatge >5.00){
-                output.add(key);
-            }
-        }
-
-        return output;
-    }
-
 
 }
