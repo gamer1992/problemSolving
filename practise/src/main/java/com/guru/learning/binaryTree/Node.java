@@ -1,12 +1,12 @@
-package com.guru.learning;
+package com.guru.learning.binaryTree;
 
 public  class Node<T> {
 
-    Node<T> rightNode;
+    public Node<T> rightNode;
 
-    Node<T> leftNode;
+    public Node<T> leftNode;
 
-    T data;
+    public T data;
 
     public Node(T t){
         this.data=t;

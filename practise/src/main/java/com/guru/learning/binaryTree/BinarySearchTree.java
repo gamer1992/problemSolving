@@ -1,10 +1,10 @@
-package com.guru.learning;
+package com.guru.learning.binaryTree;
 
 public class BinarySearchTree<T> {
 
     private Node<T> root;
 
-    <T> void addNode(T t) {
+   public <T> void addNode(T t) {
 
         root = addNode(root, t);
     }
@@ -13,7 +13,7 @@ public class BinarySearchTree<T> {
         return key.compareTo(key2);
     }
 
-    private <T> Node addNode(Node root, T t) {
+    public <T> Node addNode(Node root, T t) {
         if (root == null) {
             return new Node<T>(t);
         }

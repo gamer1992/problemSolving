@@ -1,4 +1,4 @@
-package com.guru.learning;
+package com.guru.learning.arrays;
 
 import java.util.Scanner;
 

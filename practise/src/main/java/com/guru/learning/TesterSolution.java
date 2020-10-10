@@ -1,9 +1,7 @@
 package com.guru.learning;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class TesterSolution {
     public static void process(String s){

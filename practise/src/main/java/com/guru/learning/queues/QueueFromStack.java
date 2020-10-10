@@ -1,4 +1,4 @@
-package com.guru.learning;
+package com.guru.learning.queues;
 
 import java.util.LinkedList;
 import java.util.Stack;

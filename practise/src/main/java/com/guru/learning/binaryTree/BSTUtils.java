@@ -1,4 +1,4 @@
-package com.guru.learning;
+package com.guru.learning.binaryTree;
 
 public class BSTUtils {
 
@@ -34,6 +34,35 @@ public class BSTUtils {
 
         return root;
 
+    }
+
+    static  int findLeafNodes(Node<Integer> node, int count){
+
+        if(node==null){
+            return 0;
+        }
+
+        int leftCount=findLeafNodes(node.rightNode,count);
+        int rightCount=findLeafNodes(node.leftNode,count);
+
+        if(node.rightNode==null && node.leftNode==null){
+            count++;
+        }
+
+        return count+leftCount+rightCount;
+
+    }
+
+
+    static int findDepth(Node<Integer> node){
+        if(node==null){
+            return  0;
+        }
+
+        int lf=findDepth(node.rightNode);
+        int rf=findDepth(node.leftNode);
+
+        return 1+ Math.max(lf,rf);
     }
 
 
