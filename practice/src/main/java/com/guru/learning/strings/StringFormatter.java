@@ -2,6 +2,9 @@ package com.guru.learning.strings;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringFormatter {
     public static void process(String s){
@@ -25,8 +28,25 @@ public class StringFormatter {
             Rank*/
 
     public static void main(String[] args) {
-        List<String> inputs = Arrays.asList("Hacker", "Rank");
 
+        int count=0;
+        int k=0;
+        int n=2;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n;j++){
+                if(i!=j){
+                    int k2=i&j;
+                    if(k2> count && k2 < k){
+                        count=k2;
+                    }
+                }
+            }
+        }
+        System.out.println(count);
+
+        List<String> inputs = Arrays.asList("Hacker", "Rank");
+        TreeMap map=new TreeMap();
+        //map.containsKey()
         for (String input : inputs) {
             process(input);
         }
